@@ -39,16 +39,22 @@
 
 #display {
 	text-align: right;
+	overflow: hidden;
+	white-space: pre-wrap;
 }
 
 #answer {
 	font-size: 2rem;
 	line-height: 2em;
+	overflow: hidden;
+	white-space: pre-wrap;
 }
 
 #expression {
 	font-size: 1rem;
 	line-height: 1em;
+	overflow: hidden;
+	white-space: pre-wrap;
 	color: var(--light-gray);
 }
 
@@ -57,6 +63,10 @@ button {
 	border: none;
 	cursor: pointer;
 	transition: transform 0.3s ease-in-out;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
 }
 
 button:active {
