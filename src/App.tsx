@@ -12,8 +12,8 @@ function App() {
 				<h1>Calculator</h1>
 				<div id="calculator">
 					<div id="display">
-						<div id="answer"></div>
-						<div id="expression"></div>
+						<div id="answer">0</div>
+						<div id="expression">0</div>
 					</div>
 					<button className="light-gray" id="clear" onClick={() => buttonPress('clear')}>
 						AC

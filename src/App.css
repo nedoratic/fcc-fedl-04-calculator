@@ -1,3 +1,11 @@
+:root {
+	--white: #ffffff;
+	--light-gray: #6f6f6f;
+	--gray: #3f3f3f;
+	--dark: #1e1e1e;
+	--blue: #00a0cd;
+}
+
 #root {
 	max-width: 1280px;
 	margin: 0 auto;
@@ -5,44 +13,74 @@
 	text-align: center;
 }
 
-.logo {
-	height: 6em;
-	padding: 1.5em;
-	will-change: filter;
-	transition: filter 300ms;
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
-.logo:hover {
-	filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.react:hover {
-	filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
-}
-
-@media (prefers-reduced-motion: no-preference) {
-	a:nth-of-type(2) .logo {
-		animation: logo-spin infinite 20s linear;
-	}
-}
-
-.card {
-	padding: 2em;
-}
-
-.read-the-docs {
-	color: #888;
+#calculator {
+	display: grid;
+	grid-template-areas:
+		'display display display display'
+		'clear negative percentage divide'
+		'seven eight nine multiply'
+		'four five six subtract'
+		'one two three add'
+		'zero zero decimal equals';
+	grid-template-columns: 3em 3em 3em 3em;
+	gap: 0.5em;
+	border-radius: 0.4em;
+	padding: 0.5em;
+	background-color: var(--dark);
+	color: var(--white);
 }
 
 #display {
 	text-align: right;
+}
+
+#answer {
+	font-size: 2rem;
+}
+
+#expression {
+	font-size: 1rem;
+	color: var(--light-gray);
+}
+
+button {
+	height: 3em;
+	border: none;
+	cursor: pointer;
+	transition: transform 0.3s ease-in-out;
+}
+
+button:active {
+	transform: scale(0.9);
+}
+
+.light-gray {
+	background-color: var(--light-gray);
+}
+
+.gray {
+	background-color: var(--gray);
+}
+
+.blue {
+	background-color: var(--blue);
+}
+
+#display {
+	grid-area: display;
+}
+
+#zero {
+	grid-area: zero;
+}
+
+#equals {
+	grid-area: equals;
 }
